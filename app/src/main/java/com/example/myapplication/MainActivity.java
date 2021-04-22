@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.database.FirebaseListAdapter;
+import com.github.library.bubbleview.BubbleTextView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         {
             @Override
             protected void populateView(View v, Message model, int position) {
-                TextView mess_user, mess_time, mess_text;
+                TextView mess_user, mess_time ;  BubbleTextView mess_text;
                 mess_user = v.findViewById(R.id.message_user);
                 mess_time = v.findViewById(R.id.message_time);
                 mess_text = v.findViewById(R.id.message_text);

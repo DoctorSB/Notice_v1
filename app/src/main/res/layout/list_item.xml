@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
@@ -9,21 +10,35 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/message_user"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        android:textColorHint="@color/white"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:id="@+id/message_time" />
+        android:id="@+id/message_time"
+        android:textColorHint="#c1c4c8"
+        />
 
-    <TextView
+
+    <com.github.library.bubbleview.BubbleTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:id="@+id/message_text"
+        android:textColor="#bac9d9"
         android:layout_marginTop="5dp"
         android:layout_below="@id/message_user"
         android:textSize="18dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:padding="10dp"
+        app:angle="8dp"
+        app:arrowWidth="8dp"
+
+        app:arrowPosition="25dp"
+        app:arrowLocation="left"
+        app:bubbleColor="#242f3e"
+        />
 </RelativeLayout>
